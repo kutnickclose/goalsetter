@@ -39,4 +39,5 @@
   <p><%= comment.body %></p>
 <% end %>
 <%= render "shared/comments_form", commentable_id: @goal.id, commentable_type: "Goal" %>
-<!-- add link to author's profile page later. -->
+
+<%= link_to("back to profile", user_url(current_user))%>

@@ -12,3 +12,15 @@
   <br/>
   <input type="submit" value="<%= button_text %>">
 </form>
+
+<form action="<%= session_url %>" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	
+  <input type="hidden" value="guest@gmail.com" name="user[username]" id="user_username">
+  <br/>
+	
+  <input type="hidden" value="password" name="user[password]"id="user_password">
+  <br/>
+	
+  <input type="submit" value="Login as guest">
+</form>
