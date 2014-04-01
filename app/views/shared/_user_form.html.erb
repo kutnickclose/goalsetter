@@ -1,5 +1,5 @@
 <% action = (type == :newuser) ? users_url : session_url %>
-<% button_text = (type == :newuser) ? "Sign Up" : "Log In" %>
+<% button_text = (type == :newuser) ? "Sign Up" : "Sign In" %>
 <form action="<%= action %>" method="POST">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <label for="user_username">Username:</label>
@@ -16,7 +16,7 @@
 <form action="<%= session_url %>" method="POST">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 	
-  <input type="hidden" value="guest@gmail.com" name="user[username]" id="user_username">
+  <input type="hidden" value="guest" name="user[username]" id="user_username">
   <br/>
 	
   <input type="hidden" value="password" name="user[password]"id="user_password">

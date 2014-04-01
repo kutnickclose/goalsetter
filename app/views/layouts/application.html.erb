@@ -19,11 +19,12 @@
   <div>
     <% if current_user %>
     <p>Welcome <%= link_to(current_user_name, user_url(current_user)) %></p>
+		<p><%= link_to("see all users", users_url)%>
     <%= button_to "Log Out", session_url, method: :delete %>
     <% else %>
-    <p><%= link_to "Sign Up", new_user_url %></p>
-    <p>or</p>
-    <p><%= link_to "Log In", new_session_url %></p>
+    <%= link_to "Sign Up", new_user_url %>
+    or
+    <%= link_to "Sign In", new_session_url %>
     <% end %>
   </div>
 </header>
