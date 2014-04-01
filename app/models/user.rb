@@ -2,7 +2,6 @@
 
 class User < ActiveRecord::Base
   attr_reader :password
-  
 
   validates :username, :uniqueness => true, :presence => true
   validates :password, :length => { :in => 6..12, :allow_nil => true }

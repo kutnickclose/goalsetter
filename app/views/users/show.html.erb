@@ -4,6 +4,7 @@
 <% end %>
 <%= render "shared/comments_form", commentable_id: @user.id, commentable_type: "User" %>
 <h3><%= @user.username.capitalize %>'s Goals:</h3>
+ <%= link_to("add a new goal", new_goal_url)%>
 <ul>
   <% @user.goals.each do |goal| %>
     <% if (current_user && current_user.id == @user.id) || !(goal.private) %>

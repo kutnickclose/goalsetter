@@ -26,10 +26,6 @@
     <% end %>
     </td>
   </tr>
-  <tr>
-    <th>Cheers:</th>
-    <td><%= @goal.cheers.length %></td>
-  </tr>
   <% if current_user && current_user.id == @goal.user_id %>
     <tr>
       <th>Completed?</th>
